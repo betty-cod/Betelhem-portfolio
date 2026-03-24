@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Betelhem Tadesse | Portfolio</title>
+  <link rel="icon" href="unl-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,9 @@
     .project-card {
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    
+    .project-card {
+      cursor: pointer;
+    }
     .project-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
@@ -145,6 +148,7 @@
       line-height: 1.05;
       letter-spacing: -0.05em;
     }
+    
   h1 {
     font-size: 2.8rem;
     font-weight: 700;
@@ -161,21 +165,13 @@
       color: #374151;
       max-width: 640px;
     }
-
-   .hero-actions {
-    display: flex;
-    gap: 12px;
-    margin: 15px 0;
-  } 
     
-  .hero-actions {
-    margin-bottom: 15px;
-  }
+    .hero-actions {
+      margin-bottom: 15px;
+    }
     .education-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+      margin-top: 20px;
+    }
   
   .edu-text {
     border-left: 3px solid #d00000;
@@ -214,6 +210,9 @@
       color: white;
       box-shadow: var(--shadow);
     }
+    .btn {
+      cursor: pointer;
+    }
 
     .btn-primary:hover {
       transform: translateY(-1px);
@@ -246,24 +245,35 @@
 
     .hero-card {
       background: linear-gradient(180deg, #ffffff 0%, #fdf2f2 100%);
-      border: 1px solid var(--border);
       border-radius: 28px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 26px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #fff, #fee2e2);
     }
 
-  .profile-image {
-    width: 260px;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 24px;
-    border: 1px solid rgba(255,255,255,0.7);
-  }
-    .section {
+    .profile-image {
+      width: 260px;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+      .profile-image {
+      width: 260px;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .profile-image:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease;
+    }
+    .profile-image {
+      border: 3px solid #ffffff;
+    }
+        .section {
       padding: 36px 0;
     }
 
@@ -418,10 +428,10 @@
       flex-wrap: wrap;
     }
       .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px; /* increase spacing */
-  }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px; /* increase spacing */
+    }
   
   .skills-card {
     padding: 26px;
@@ -496,8 +506,8 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#">🔗 LinkedIn</a>
-        <a href="#">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
       </nav>
     </div>
   </header>
@@ -509,7 +519,7 @@
           <div class="eyebrow">Business Analytics Student at UNL</div>
           <h1>Hi, I’m Betelhem Tadesse</h1>
           <p class="subtitle">
-            Aspiring Data Analyst | Turning Data into Business Decisions
+            Aspiring Data Analyst | Turning Data into Actionable Business Insights
           </p>
           <div class="hero-actions">
       <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
@@ -564,28 +574,9 @@
           <p>Expected Graduation: May 2027</p>
         </div>
       </div>
-
-    </div>
-  </div>
-</section>
-            <div class="stats">
-            <div class="stat">
-              <strong>UNL</strong>
-              <span>University of Nebraska–Lincoln</span>
-            </div>
-            <div class="stat">
-              <strong>Business Analytics</strong>
-              <span>Major with Computer Science minor</span>
-            </div>
-            <div class="stat">
-              <strong>May 2027</strong>
-              <span>Expected graduation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+      </div> <!-- close about-card -->
+    </div>   <!-- close container -->
+  </section> <!-- close about section --> 
     <section class="section" id="experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
@@ -640,11 +631,9 @@
               </div>
             </div>
             <p>
-              I recently built my first Power BI dashboard using a real-world sales dataset, and I’m proud of how it turned out. In this project, I analyzed sales performance by category, profit across different regions, and sales trends over time. I also added interactive filters to make the dashboard more user-friendly and allow deeper insights.
-            </p>
+              Developed an interactive Power BI dashboard analyzing sales performance, profit trends, and regional insights. Created dynamic visualizations and filters to support data-driven decision-making and improve user interaction.</p>
             <p>
-              This experience helped me better understand how to turn raw data into meaningful insights and visualize them clearly for decision-making.
-            </p>
+                Delivered insights to support data-driven business decisions.</p>
             <div class="project-tags">
               <span class="tag">Power BI</span>
               <span class="tag">Dashboard Design</span>
@@ -714,16 +703,16 @@
     <span class="tag">Financial Analysis</span>
   </div>
 
-  <div style="margin-top:16px;">
-    <a href="https://github.com/betty-cod/apple-stock-analyzer/blob/main/Apple_Stock_Analyzer.py"
-       target="_blank"
-       style="padding:10px 14px; border-radius:10px; background:#111827; color:white; font-weight:600; text-decoration:none; display:inline-block;">
-      View Code on GitHub →
-    </a>
-  </div>
+  <div class="project-link-row">
+  <a href="https://github.com/betty-cod/apple-stock-analyzer/blob/main/Apple_Stock_Analyzer.py"
+     target="_blank"
+     class="project-link-btn">
+    View Code on GitHub →
+  </a>
+</div>
 </article>
 
-          <article class="project-card">
+      <article class="project-card">
   <div class="project-head">
     <div>
       <h3 class="project-title">Supply Chain Optimization Model</h3>
@@ -830,7 +819,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© 2026 Betelhem Tadesse. Built with care and designed for professional growth.</div>
+    <div class="container">© 2026 Betelhem Tadesse | Data Analytics Portfolio</div>
   </footer>
 </body>
 </html>
