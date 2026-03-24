@@ -21,24 +21,24 @@
       box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
     }
 
-.project-link-btn:hover {
-  transform: translateY(-1px);
-  opacity: 0.95;
-}
-
-.project-link-row {
-  margin-top: 16px;
-}
-
-.project-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-}
-    :root {
+    .project-link-btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+    
+    .project-link-row {
+      margin-top: 16px;
+    }
+    
+    .project-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    }
+        :root {
       --bg: #f7f8fb;
       --card: #ffffff;
       --text: #1f2937;
@@ -167,14 +167,20 @@
     gap: 12px;
     margin: 15px 0;
   } 
-  .education-card {
+    
+  .hero-actions {
+    margin-bottom: 15px;
+  }
+    .education-card {
     display: flex;
     align-items: center;
-    gap: 16px; /* reduce from 20px → tighter */
+    gap: 16px;
   }
-    .education-card:hover {
-      transform: translateY(-4px);
-    }
+  
+  .edu-text {
+    border-left: 3px solid #d00000;
+    padding-left: 14px;
+  }
     
     .edu-logo {
       width: 55px;
@@ -189,10 +195,7 @@
     .edu-text p {
       margin: 3px 0;
     }
-    .edu-text {
-      border-left: 3px solid #d00000;
-      padding-left: 14px;
-    }
+    
     .btn {
       display: inline-flex;
       align-items: center;
@@ -219,9 +222,9 @@
 
     .btn-secondary {
       border: 1px solid #ccc;
-      padding: 8px 14px;
-      border-radius: 6px;
       background: #f9f9f9;
+      padding: 10px 14px;
+      border-radius: 8px;
     }
 
     .btn-secondary:hover {
@@ -281,7 +284,7 @@
       gap: 40px;
       align-items: start;
     }
-        .about-card,
+    .about-card,
     .experience-card,
     .project-card,
     .skills-card,
@@ -369,11 +372,11 @@
       margin: 14px 0 16px;
     }
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       transition: 0.3s ease;
-    } 
+    }
     .project-card {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
     .tag {
