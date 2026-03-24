@@ -335,6 +335,13 @@
       gap: 10px;
       margin: 14px 0 16px;
     }
+    .project-card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+    } 
+    .project-card {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
 
     .tag {
   display: inline-block;
@@ -451,9 +458,6 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">
-        <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/betty-cod" target="_blank">GitHub</a>
       </nav>
     </div>
   </header>
@@ -463,12 +467,19 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Business Analytics Student at UNL</div>
-          <h1>Hi, I’m Betelhem Tadesse.</h1>
-          <div class="subtitle">Business Analytics Student | Aspiring Data Analyst</div>
+          <h1>Hi, I’m Betelhem Tadesse</h1>
+          <p class="subtitle">
+            Data Analyst in Progress | Turning Data into Business Decisions
+          </p>
+          
+          <a href="Betelhem_Tadesse_Resume.pdf" class="btn-primary" download>
+            Download Resume
+          </a>
+          
           <p>
             I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making. I’m currently seeking internship opportunities where I can apply my analytical skills, continue learning, and contribute to real-world business impact.
           </p>
-          <div class="hero-actions">
+                  <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View My Projects</a>
             <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
           </div>
@@ -557,7 +568,8 @@
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <p class="section-text">Here are a few projects that reflect my growing skills in analytics, visualization, and business problem solving.</p>
+        <p class="section-text">
+          Here are a few projects that reflect my growing skills in analytics, visualization, and business problem solving.</p>
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-head">
