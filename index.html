@@ -145,7 +145,10 @@
       line-height: 1.05;
       letter-spacing: -0.05em;
     }
-
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
     .subtitle {
       font-size: 1.15rem;
       color: var(--muted);
@@ -391,16 +394,18 @@
     padding: 26px;
     border-radius: 20px;
   }
-  
+  .subtitle {
+    color: #555;
+  }
   .skill-list {
     display: flex;
     flex-direction: column; /* stack nicely */
     gap: 10px;
   }
-    .hero-actions {
+   .hero-actions {
+  margin: 20px 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
     .btn:hover {
   transform: translateY(-1px);
@@ -471,14 +476,19 @@
           <p class="subtitle">
             Data Analyst in Progress | Turning Data into Business Decisions
           </p>
-          
-          <a href="Betelhem_Tadesse_Resume.pdf" class="btn-primary" download>
-              Download Resume
+          <div class="hero-actions">
+      <a href="Betelhem_Tadesse_Resume.pdf" target="_blank" class="btn-secondary">
+          View Resume
+      </a>
+
+        <a href="Betelhem_Tadesse_Resume.pdf" download class="btn-primary">
+            Download Resume
           </a>
+        </div>
           <p>
             I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making. I’m currently seeking internship opportunities where I can apply my analytical skills, continue learning, and contribute to real-world business impact.
           </p>
-                  <div class="hero-actions">
+            <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View My Projects</a>
             <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
           </div>
