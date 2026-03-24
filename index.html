@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Betelhem Tadesse | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -175,7 +176,9 @@
       border: 1px solid transparent;
       transition: all 0.2s ease;
     }
-
+    .btn:hover {
+      transform: translateY(-2px);
+    }
     .btn-primary {
       background: var(--accent);
       color: white;
@@ -211,15 +214,19 @@
       border-radius: 28px;
       padding: 22px;
       box-shadow: var(--shadow);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .profile-image {
-      width: 280px;   /* smaller size */
-      height: auto;
-      object-fit: cover;
-      border-radius: 23px;
-      border: 1px solid rgba(255,255,255,0.7);
-    }
+  .profile-image {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.7);
+  }
     .section {
       padding: 36px 0;
     }
@@ -235,7 +242,12 @@
       max-width: 720px;
       margin-bottom: 24px;
     }
-
+.section#skills .container {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
     .about-card,
     .experience-card,
     .project-card,
@@ -325,13 +337,13 @@
     }
 
     .tag {
-      background: #f3f4f6;
-      color: #374151;
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
 
     .project-image {
       border-radius: 16px;
@@ -362,41 +374,72 @@
       gap: 24px;
       flex-wrap: wrap;
     }
+      .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px; /* increase spacing */
+  }
+  
+  .skills-card {
+    padding: 26px;
+    border-radius: 20px;
+  }
+  
+  .skill-list {
+    display: flex;
+    flex-direction: column; /* stack nicely */
+    gap: 10px;
+  }
+    .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+    .btn:hover {
+  transform: translateY(-1px);
+  transition: 0.2s ease;
+}
 
     .footer {
-      padding: 34px 0 50px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.95rem;
-    }
+  padding: 34px 0 50px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
 
-    @media (max-width: 960px) {
-      .hero-grid,
-      .projects-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
+/* Tablet + small screens */
+@media (max-width: 960px) {
+  .hero-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .stats {
-        grid-template-columns: 1fr;
-      }
-    }
+  .stats {
+    grid-template-columns: 1fr;
+  }
 
-    @media (max-width: 720px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
+  .section#skills .container {
+    grid-template-columns: 1fr;
+  }
+}
 
-      .hero {
-        padding-top: 40px;
-      }
+/* Mobile screens */
+@media (max-width: 720px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
 
-      .contact-card {
-        align-items: flex-start;
-      }
-    }
+  .hero {
+    padding-top: 40px;
+  }
+
+  .contact-card {
+    align-items: flex-start;
+  }
+}
   </style>
 </head>
 <body>
@@ -408,7 +451,9 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">
+        <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/betty-cod" target="_blank">GitHub</a>
       </nav>
     </div>
   </header>
@@ -421,7 +466,7 @@
           <h1>Hi, I’m Betelhem Tadesse.</h1>
           <div class="subtitle">Business Analytics Student | Aspiring Data Analyst</div>
           <p>
-            I am a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science. I am passionate about using data to solve real-world business problems and support better decision-making. Through academic and personal projects, I have built experience with Excel, Python, SQL, and Power BI. I enjoy working in team environments, learning quickly, and taking on challenges that help me grow as both an analyst and a professional.
+            I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making. I’m currently seeking internship opportunities where I can apply my analytical skills, continue learning, and contribute to real-world business impact.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">View My Projects</a>
@@ -563,13 +608,13 @@
     <span class="tag">Customer Retention</span>
   </div>
 
-  <div style="margin-top:16px;">
-   <a href="https://github.com/betty-cod/customer-churn-analysis-/blob/main/churn_analysis.py"
-   target="_blank"
-   style="padding:10px 14px; border-radius:10px; background:#111827; color:white; font-weight:600; text-decoration:none; display:inline-block;">
-  View Code on GitHub →
-  </a>
- </div>
+    <div class="project-link-row">
+    <a href="https://github.com/betty-cod/customer-churn-analysis-/blob/main/churn_analysis.py"
+       target="_blank"
+       class="project-link-btn">
+      View Code on GitHub →
+    </a>
+  </div>
 </article>
     
 <article class="project-card">
@@ -642,7 +687,8 @@
     </a>
   </div>
 </article>
-
+</div>
+        
     <section class="section" id="skills">
       <div class="container">
         <h2 class="section-title">Skills</h2>
@@ -692,21 +738,22 @@
     </section>
 
     <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <h2 class="section-title" style="margin-bottom: 8px;">Let’s Connect</h2>
-            <p class="section-text" style="margin: 0; max-width: 560px;">
-              I’m currently seeking internship opportunities and would love to connect with professionals, recruiters, and others in analytics, business, and technology.
-            </p>
-          </div>
-          <div class="hero-actions" style="margin-bottom: 0;">
-            <a class="btn btn-primary" href="mailto:laikebetelhem@gmail.com">Email Me</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
-          </div>
+    <div class="container">
+      <div class="contact-card">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 8px;">Contact Me</h2>
+          <p class="section-text" style="margin: 0; max-width: 560px;">
+            I’m currently seeking internship opportunities in Business Analytics and would love to connect with professionals, recruiters, and others in data and technology.
+          </p>
+        </div>
+        <div class="hero-actions" style="margin:16px 0 0 0;">
+          <a class="btn btn-primary" href="mailto:laikebetelhem@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/betty-cod" target="_blank">GitHub</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   </main>
 
   <footer class="footer">
