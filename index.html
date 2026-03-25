@@ -123,7 +123,6 @@
     .hero {
       padding: 72px 0 40px;
     }
-
     .hero-grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -155,7 +154,7 @@
     font-size: 2.8rem;
     font-weight: 700;
   }
-      .subtitle {
+    .subtitle {
       font-size: 1.15rem;
       color: var(--muted);
       margin-bottom: 18px;
@@ -413,7 +412,7 @@
       font-weight: 800;
       margin-bottom: 14px;
     }
-    skill-group-title i {
+    .skill-group-title i {
       margin-right: 8px;
       color: #b91c1c;
     }
@@ -422,14 +421,13 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .contact-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
+    .contact-highlight {
+      color: #b91c1c;        /* red */
+      font-weight: 800;      /* bold */
+      font-size: 1.05rem;    /* slightly bigger */
+      margin: 10px 0 16px;
     }
-      .skills-grid {
+          .skills-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 22px;
@@ -544,56 +542,56 @@
 
   <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-  <div class="eyebrow">Business Analytics Student at UNL</div>
+  <div class="container hero-grid">
 
-  <h1>Hi, I’m Betelhem Tadesse</h1>
+    <!-- LEFT SIDE (TEXT) -->
+    <div>
+      <div class="eyebrow">Business Analytics Student at UNL</div>
 
-  <p class="subtitle">
-    Aspiring Data Analyst | Turning Data into Actionable Business Insights
-  </p>
+      <h1>Hi, I’m Betelhem Tadesse</h1>
 
-  <div class="hero-actions">
-    <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
-      View Resume
-    </a>
+      <p class="subtitle">
+        Aspiring Data Analyst | Turning Data into Actionable Business Insights
+      </p>
 
-    <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
-      Download Resume
-    </a>
+      <div class="hero-actions">
+        <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
+          View Resume
+        </a>
+
+        <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
+          Download Resume
+        </a>
+      </div>
+
+      <p>
+        I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making.
+      </p>
+
+      <p class="contact-highlight">
+        Currently seeking Business Analytics internship opportunities.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View My Projects</a>
+        <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
+      </div>
+
+      <div class="info-row">
+        <span>📍 Lincoln, NE</span>
+        <span>📧 laikebetelhem@gmail.com</span>
+        <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
+        <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (IMAGE) -->
+    <div class="hero-card">
+      <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image">
+    </div>
+
   </div>
-
-  <p>
-    I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making.
-  </p>
-
-  <!-- 🔥 Highlighted line -->
-  <p class="contact-highlight">
-    Currently seeking Business Analytics internship opportunities.
-  </p>
-
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#projects">View My Projects</a>
-    <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
-  </div>
-
-  <div class="info-row">
-    <span>📍 Lincoln, NE</span>
-    <span>📧 laikebetelhem@gmail.com</span>
-    <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
-    <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
-  </div>
-</div>
-        <div class="container hero-grid">
-        <div class="hero-card">
-    <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image" />
-  </div>
-
-  <div>
-  </div>
-</div>
-
+</section>
     <section class="section" id="about">
   <div class="container">
     <h2 class="section-title">About Me</h2>
@@ -618,7 +616,7 @@
       </div>
       </div> <!-- close about-card -->
     </div>   <!-- close container -->
-  </section> <!-- close about section --> 
+    </section> <!-- close about section -->
     <section class="section" id="experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
@@ -658,12 +656,16 @@
         </div>
       </div>
     </section>
+    </div>
+</section> <!-- close experience section -->
 
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section-title">Projects</h2>
         <p class="section-text">
-          Here are a few projects that reflect my growing skills in analytics, visualization, and business problem solving.</p>
+          Here are a few projects that reflect my growing skills in analytics, visualization, and business problem solving.
+        </p>
+        
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-head">
@@ -782,17 +784,20 @@
     <span class="tag">Decision Making</span>
   </div>
 
-  <div class="project-link-row">
-    <a href="https://github.com/betty-cod/Supply_chain_optimization"
-       target="_blank"
-       class="project-link-btn">
-      View Project on GitHub →
-    </a>
-  </div>
-</article>
+ <div class="project-link-row">
+  <a href="https://github.com/betty-cod/Supply_chain_optimization"
+     target="_blank"
+     class="project-link-btn">
+    View Project on GitHub →
+  </a>
 </div>
-        
-    <section class="section" id="skills">
+</article>
+
+</div> <!-- projects-grid -->
+</div> <!-- container -->
+</section> <!-- projects section -->
+
+<section class="section" id="skills">
   <div class="container">
     <h2 class="section-title">Skills</h2>
     <p class="section-text">
@@ -848,6 +853,7 @@
     </div>
   </article>
 </div>
+</section> <!-- ✅ THIS WAS MISSING -->
     <section class="section" id="contact">
     <div class="container">
       <div class="contact-card">
