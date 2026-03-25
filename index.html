@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Betelhem Tadesse | Portfolio</title>
+  <title>Betelhem Tadesse | Business Analytics Portfolio</title>
+  <meta name="description" content="Betelhem Tadesse portfolio - Business Analytics student at the University of Nebraska–Lincoln showcasing projects in Power BI, Python, Excel, and SQL.">
+  <meta name="author" content="Betelhem Tadesse">
   <link rel="icon" href="unl-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -159,39 +161,39 @@
       margin-bottom: 18px;
       font-weight: 600;
     }
-
     .hero p {
       margin: 0 0 26px;
       color: #374151;
       max-width: 640px;
     }
-    
     .hero-actions {
       margin-bottom: 15px;
     }
     .education-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
       margin-top: 20px;
     }
-  
-  .edu-text {
-    border-left: 3px solid #d00000;
-    padding-left: 14px;
-  }
-    
+    .edu-text {
+      border-left: 3px solid #d00000;
+      padding-left: 14px;
+    }
     .edu-logo {
       width: 55px;
       height: auto;
       object-fit: contain;
-      align-self: center; /* keeps it centered */
+    }
+    .education-card:hover {
+      transform: translateY(-2px);
+      transition: 0.2s ease;
     }
       .edu-text h3 {
       margin: 0 0 5px 0;
     }
-
     .edu-text p {
       margin: 3px 0;
     }
-    
     .btn {
       display: inline-flex;
       align-items: center;
@@ -420,7 +422,6 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .contact-card {
       display: flex;
       justify-content: space-between;
@@ -445,9 +446,9 @@
           box-shadow: var(--shadow);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-  .subtitle {
-    color: #555;
-  }
+        .subtitle {
+          color: #555;
+        }
     .skill-list {
       display: flex;
       flex-wrap: wrap;
@@ -482,7 +483,6 @@
   transform: translateY(-1px);
   transition: 0.2s ease;
 }
-
     .footer {
   padding: 34px 0 50px;
   color: var(--muted);
@@ -506,7 +506,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 /* Mobile screens */
 @media (max-width: 720px) {
   .nav-inner {
@@ -514,70 +513,86 @@
     align-items: flex-start;
     gap: 14px;
   }
-
   .hero {
     padding-top: 40px;
   }
-
   .contact-card {
     align-items: flex-start;
   }
+  .contact-highlight {
+  color: #b91c1c;
+  font-weight: 700;
+  margin: 10px 0 16px;
 }
   </style>
 </head>
 <body>
   <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#top" class="brand">Betelhem Tadesse</a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
-        <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container nav-inner">
+    <a href="#top" class="brand">Betelhem Tadesse</a>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
+    </nav>
+  </div>
+</header>
 
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Business Analytics Student at UNL</div>
-          <h1>Hi, I’m Betelhem Tadesse</h1>
-          <p class="subtitle">
-            Aspiring Data Analyst | Turning Data into Actionable Business Insights
-          </p>
-          <div class="hero-actions">
-      <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
-        View Resume
-        </a>
-            
-    <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
-        Download Resume
-    </a>
-        </div>
-          <p>
-            I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making. I’m currently seeking internship opportunities where I can apply my analytical skills, continue learning, and contribute to real-world business impact.
-          </p>
-            <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View My Projects</a>
-            <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
-          </div>
-          <div class="info-row">
-            <span>📍 Lincoln, NE</span>
-            <span>📧 laikebetelhem@gmail.com</span>
-            <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
-            <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
-          </div>
-        </div>
+  <div class="eyebrow">Business Analytics Student at UNL</div>
 
+  <h1>Hi, I’m Betelhem Tadesse</h1>
+
+  <p class="subtitle">
+    Aspiring Data Analyst | Turning Data into Actionable Business Insights
+  </p>
+
+  <div class="hero-actions">
+    <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
+      View Resume
+    </a>
+
+    <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
+      Download Resume
+    </a>
+  </div>
+
+  <p>
+    I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making.
+  </p>
+
+  <!-- 🔥 Highlighted line -->
+  <p class="contact-highlight">
+    Currently seeking Business Analytics internship opportunities.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#projects">View My Projects</a>
+    <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
+  </div>
+
+  <div class="info-row">
+    <span>📍 Lincoln, NE</span>
+    <span>📧 laikebetelhem@gmail.com</span>
+    <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
+    <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
+  </div>
+</div>
+        <div class="container hero-grid">
         <div class="hero-card">
-          <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image" />
-        </div>
-      </div>
-    </section>
+    <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image" />
+  </div>
+
+  <div>
+  </div>
+</div>
 
     <section class="section" id="about">
   <div class="container">
@@ -592,7 +607,6 @@
         My goal is to build a career where I can combine analytical thinking, communication, and business understanding...
       </p>
 
-      <!-- EDUCATION CARD -->
       <div class="education-card">
         <img src="unl-logo.png" alt="UNL logo" class="edu-logo">
 
@@ -714,7 +728,6 @@
       <div class="meta">Python / Data Structures</div>
     </div>
   </div>
-
   <p>
     Built a Python-based Apple Stock Analyzer using real-world stock data. The program calculates summary statistics, performs sorting using bubble sort and selection sort, supports date search and price filtering, and identifies the Top 5 highest closing prices using a heap.
   </p>
