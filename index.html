@@ -8,42 +8,12 @@
   <meta name="author" content="Betelhem Tadesse">
   <link rel="icon" href="unl-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .project-link-btn {
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: #111827;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
-    }
 
-    .project-link-btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
-    
-    .project-link-row {
-      margin-top: 16px;
-    }
-    
-    .project-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .project-card {
-      cursor: pointer;
-    }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-    }
-        :root {
+  <style>
+    :root {
       --bg: #f7f8fb;
       --card: #ffffff;
       --text: #1f2937;
@@ -55,9 +25,13 @@
       --max: 1120px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -95,20 +69,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
     }
-    .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-left: auto;
-  white-space: nowrap;
-}
+
     .brand {
       font-weight: 800;
       letter-spacing: -0.03em;
       font-size: 1.05rem;
+      white-space: nowrap;
     }
-        .nav-links a {
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+      white-space: nowrap;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links a {
       color: var(--muted);
       font-weight: 500;
       transition: color 0.2s ease;
@@ -117,42 +98,43 @@
     .nav-links a:hover {
       color: var(--accent);
     }
+
     .hero {
-  padding: 72px 0 40px;
-}
+      padding: 72px 0 40px;
+    }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: center;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
 
-.hero-text {
-  max-width: 640px;
-}
+    .hero-text {
+      max-width: 640px;
+    }
 
-.hero-image-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .hero-image-wrap {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
 
-.profile-image {
-  width: 280px;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
+    .profile-image {
+      width: 280px;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
 
-.profile-image:hover {
-  transform: scale(1.02);
-    
-    
+    .profile-image:hover {
+      transform: scale(1.02);
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -171,44 +153,36 @@
       font-size: clamp(2.4rem, 5vw, 4.2rem);
       line-height: 1.05;
       letter-spacing: -0.05em;
+      font-weight: 700;
     }
-    
-  h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
+
     .subtitle {
       font-size: 1.15rem;
       color: var(--muted);
-      margin-bottom: 18px;
+      margin: 0 0 18px;
       font-weight: 600;
     }
-    
-    .education-card {
+
+    .hero p {
+      margin: 0 0 26px;
+      color: #374151;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      margin: 20px 0;
       display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
-    .edu-text {
-      border-left: 3px solid #d00000;
-      padding-left: 14px;
+
+    .contact-highlight {
+      color: #b91c1c;
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin: 10px 0 16px;
     }
-    .edu-logo {
-      width: 55px;
-      height: auto;
-      object-fit: contain;
-    }
-    .education-card:hover {
-      transform: translateY(-2px);
-      transition: 0.2s ease;
-    }
-      .edu-text h3 {
-      margin: 0 0 5px 0;
-    }
-    .edu-text p {
-      margin: 3px 0;
-    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -218,38 +192,33 @@
       font-weight: 700;
       border: 1px solid transparent;
       transition: all 0.2s ease;
+      cursor: pointer;
     }
+
     .btn:hover {
       transform: translateY(-2px);
     }
+
     .btn-primary {
       background: var(--accent);
       color: white;
       box-shadow: var(--shadow);
     }
-    .btn {
-      cursor: pointer;
-    }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
       opacity: 0.95;
     }
 
     .btn-secondary {
       border: 1px solid #ccc;
       background: #f9f9f9;
+      color: var(--text);
       padding: 10px 14px;
       border-radius: 8px;
     }
 
     .btn-secondary:hover {
       border-color: #d1d5db;
-    }
-    .btn-primary:hover,
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      transition: 0.2s ease;
     }
 
     .info-row {
@@ -260,8 +229,7 @@
       font-size: 0.98rem;
     }
 
-    
-        .section {
+    .section {
       padding: 36px 0;
     }
 
@@ -273,9 +241,10 @@
 
     .section-text {
       color: var(--muted);
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 24px;
     }
+
     .about-card,
     .experience-card,
     .project-card,
@@ -291,24 +260,35 @@
       padding: 28px;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .education-card {
+      display: flex;
+      align-items: center;
       gap: 16px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
-    .stat {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
+    .education-card:hover {
+      transform: translateY(-2px);
+      transition: 0.2s ease;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.45rem;
-      margin-bottom: 4px;
+    .edu-logo {
+      width: 55px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .edu-text {
+      border-left: 3px solid #d00000;
+      padding-left: 14px;
+    }
+
+    .edu-text h3 {
+      margin: 0 0 5px 0;
+    }
+
+    .edu-text p {
+      margin: 3px 0;
     }
 
     .experience-list,
@@ -357,19 +337,52 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .project-card {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    }
+
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin: 14px 0 16px;
     }
-    .project-card:hover {
-      transform: translateY(-6px);
-      transition: 0.3s ease;
+
+    .project-link-row {
+      margin-top: 16px;
     }
-    .project-card {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+    .project-link-btn {
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #111827;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 18px rgba(17, 24, 39, 0.16);
     }
+
+    .project-link-btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .project-image {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      margin-top: 16px;
+      width: 100%;
+    }
+
     .tag {
       display: inline-block;
       padding: 6px 12px;
@@ -379,232 +392,208 @@
       font-weight: 500;
       transition: 0.2s ease;
     }
+
     .tag:hover {
       background: #fee2e2;
       color: #b91c1c;
     }
 
-    .project-image {
-      border-radius: 16px;
+    .skills-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 24px;
+    }
+
+    .skills-card {
+      background: #ffffff;
       border: 1px solid var(--border);
-      margin-top: 16px;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .container {
-      display: block;
+
+    .skills-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
     }
+
+    .skills-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #b91c1c;
+    }
+
     .skill-group-title {
       font-size: 1.1rem;
       font-weight: 800;
-      margin-bottom: 14px;
+      margin: 0 0 14px;
     }
+
     .skill-group-title i {
       margin-right: 8px;
       color: #b91c1c;
     }
+
     .skill-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    .contact-highlight {
-      color: #b91c1c;        /* red */
-      font-weight: 800;      /* bold */
-      font-size: 1.05rem;    /* slightly bigger */
-      margin: 10px 0 16px;
-    }
-          .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 22px;
-        margin-top: 24px;
-      }
-    .skills-grid {
-        gap: 26px;
-      }
-        .skills-card {
-          background: #ffffff;
-          border: 1px solid var(--border);
-          border-radius: 20px;
-          padding: 24px;
-          box-shadow: var(--shadow);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .subtitle {
-          color: #555;
-        }
-    .skill-list {
+
+    .contact-card {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
       flex-wrap: wrap;
-      gap: 10px;
     }
-    .skills-card {
-      position: relative;
-      overflow: hidden;
-    }
-      .skills-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
-  }
-  .skills-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #b91c1c; /* UNL red */
-  }
-  .section-text {
-    max-width: 760px;
-  }
-   .hero-actions {
-  margin: 20px 0;
-  display: flex;
-  gap: 12px;
-}
-    .btn:hover {
-  transform: translateY(-1px);
-  transition: 0.2s ease;
-}
+
     .footer {
-  padding: 34px 0 50px;
-  color: var(--muted);
-  text-align: center;
-  font-size: 0.95rem;
-}
+      padding: 34px 0 50px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
 
-/* Tablet + small screens */
-@media (max-width: 960px) {
-  .hero-grid,
-  .projects-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width: 960px) {
+      .hero-grid,
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .stats {
-    grid-template-columns: 1fr;
-  }
+      .hero-image-wrap {
+        justify-content: flex-start;
+      }
+    }
 
-  .section#skills .container {
-    grid-template-columns: 1fr;
-  }
-}
-/* Mobile screens */
-@media (max-width: 720px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .hero {
-    padding-top: 40px;
-  }
-  .contact-card {
-    align-items: flex-start;
-  }
-  .contact-highlight {
-  color: #b91c1c;
-  font-weight: 700;
-  margin: 10px 0 16px;
-}
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .nav-links {
+        margin-left: 0;
+        flex-wrap: wrap;
+        white-space: normal;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .contact-card {
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
   <header class="navbar">
-  <div class="container nav-inner">
-    
-    <div class="brand">Betelhem Tadesse</div>
+    <div class="container nav-inner">
+      <div class="brand">Betelhem Tadesse</div>
 
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
-      <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
-    </nav>
-
-  </div>
-</header>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
+      </nav>
+    </div>
+  </header>
 
   <main id="top">
-   <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <div class="eyebrow">Business Analytics Student at UNL</div>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">Business Analytics Student at UNL</div>
 
-      <h1>Hi, I’m Betelhem Tadesse</h1>
+          <h1>Hi, I’m Betelhem Tadesse</h1>
 
-      <p class="subtitle">
-        Aspiring Data Analyst | Turning Data into Actionable Business Insights
-      </p>
+          <p class="subtitle">
+            Aspiring Data Analyst | Turning Data into Actionable Business Insights
+          </p>
 
-      <div class="hero-actions">
-        <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
-          View Resume
-        </a>
-        <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
-          Download Resume
-        </a>
-      </div>
+          <div class="hero-actions">
+            <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn btn-secondary">
+              View Resume
+            </a>
+            <a href="Betelhem_Tadesse_resume.pdf" download class="btn btn-primary">
+              Download Resume
+            </a>
+          </div>
 
-      <p>
-        I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making.
-      </p>
+          <p>
+            I’m a Business Analytics student at the University of Nebraska–Lincoln with a minor in Computer Science, passionate about turning data into clear, actionable insights. Through projects in Power BI, Python, Excel, and SQL, I enjoy solving business problems, building visualizations, and creating tools that support smarter decision-making.
+          </p>
 
-      <p class="contact-highlight">
-        Currently seeking Business Analytics internship opportunities.
-      </p>
+          <p class="contact-highlight">
+            Currently seeking Business Analytics internship opportunities.
+          </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View My Projects</a>
-        <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
-      </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Projects</a>
+            <a class="btn btn-secondary" href="mailto:laikebetelhem@gmail.com">Contact Me</a>
+          </div>
 
-      <div class="info-row">
-        <span>📍 Lincoln, NE</span>
-        <span>📧 laikebetelhem@gmail.com</span>
-        <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
-        <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
-      </div>
-    </div>
+          <div class="info-row">
+            <span>📍 Lincoln, NE</span>
+            <span>📧 laikebetelhem@gmail.com</span>
+            <span><a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a></span>
+            <span><a href="https://github.com/betty-cod" target="_blank">GitHub</a></span>
+          </div>
+        </div>
 
-    <div class="hero-image-wrap">
-      <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image">
-    </div>
-  </div>
-</section>
-  </div>
-</section>
-    <section class="section" id="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-
-    <p class="section-text">
-      I am currently pursuing a Bachelor of Science in Business Administration with a major in Business Analytics and a minor in Computer Science at the University of Nebraska–Lincoln...
-    </p>
-
-    <div class="about-card">
-      <p>
-        My goal is to build a career where I can combine analytical thinking, communication, and business understanding...
-      </p>
-
-      <div class="education-card">
-        <img src="unl-logo.png" alt="UNL logo" class="edu-logo">
-
-        <div class="edu-text">
-          <h3>University of Nebraska–Lincoln</h3>
-          <p>Business Analytics Major | Computer Science Minor</p>
-          <p>Expected Graduation: May 2027</p>
+        <div class="hero-image-wrap">
+          <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image">
         </div>
       </div>
-      </div> <!-- close about-card -->
-    </div>   <!-- close container -->
-    </section> <!-- close about section -->
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-text">
+          I am currently pursuing a Bachelor of Science in Business Administration with a major in Business Analytics and a minor in Computer Science at the University of Nebraska–Lincoln...
+        </p>
+
+        <div class="about-card">
+          <p>
+            My goal is to build a career where I can combine analytical thinking, communication, and business understanding...
+          </p>
+
+          <div class="education-card">
+            <img src="unl-logo.png" alt="UNL logo" class="edu-logo">
+
+            <div class="edu-text">
+              <h3>University of Nebraska–Lincoln</h3>
+              <p>Business Analytics Major | Computer Science Minor</p>
+              <p>Expected Graduation: May 2027</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
-        <p class="section-text">I have developed strong communication, teamwork, and problem-solving skills through customer-facing roles in fast-paced environments.</p>
+        <p class="section-text">
+          I have developed strong communication, teamwork, and problem-solving skills through customer-facing roles in fast-paced environments.
+        </p>
+
         <div class="experience-list">
           <article class="experience-card">
             <div class="job-head">
@@ -640,8 +629,6 @@
         </div>
       </div>
     </section>
-    </div>
-</section> <!-- close experience section -->
 
     <section class="section" id="projects">
       <div class="container">
@@ -649,7 +636,7 @@
         <p class="section-text">
           Here are a few projects that reflect my growing skills in analytics, visualization, and business problem solving.
         </p>
-        
+
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-head">
@@ -659,9 +646,11 @@
               </div>
             </div>
             <p>
-              Developed an interactive Power BI dashboard analyzing sales performance, profit trends, and regional insights. Created dynamic visualizations and filters to support data-driven decision-making and improve user interaction.</p>
+              Developed an interactive Power BI dashboard analyzing sales performance, profit trends, and regional insights. Created dynamic visualizations and filters to support data-driven decision-making and improve user interaction.
+            </p>
             <p>
-                Delivered insights to support data-driven business decisions.</p>
+              Delivered insights to support data-driven business decisions.
+            </p>
             <div class="project-tags">
               <span class="tag">Power BI</span>
               <span class="tag">Dashboard Design</span>
@@ -671,185 +660,179 @@
             <img src="powerbi-dashboard.png" alt="Power BI sales performance dashboard screenshot" class="project-image" />
           </article>
 
-  <article class="project-card">
-  <div class="project-head">
-    <div>
-      <h3 class="project-title">Customer Churn Analysis</h3>
-      <div class="meta">Python / Exploratory Data Analysis</div>
-    </div>
-  </div>
+          <article class="project-card">
+            <div class="project-head">
+              <div>
+                <h3 class="project-title">Customer Churn Analysis</h3>
+                <div class="meta">Python / Exploratory Data Analysis</div>
+              </div>
+            </div>
 
-  <p>
-    Analyzed customer churn data using Python to identify patterns in customer retention. 
-    Explored churn rate, contract type, monthly charges, tenure, and payment method to 
-    understand why customers leave.
-  </p>
+            <p>
+              Analyzed customer churn data using Python to identify patterns in customer retention. Explored churn rate, contract type, monthly charges, tenure, and payment method to understand why customers leave.
+            </p>
 
-  <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
-    Key insights: Month-to-month customers churn the most, higher monthly charges increase churn, 
-    and customers with shorter tenure are more likely to leave.
-  </p>
+            <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
+              Key insights: Month-to-month customers churn the most, higher monthly charges increase churn, and customers with shorter tenure are more likely to leave.
+            </p>
 
-  <div class="project-tags">
-    <span class="tag">Python</span>
-    <span class="tag">Pandas</span>
-    <span class="tag">Matplotlib</span>
-    <span class="tag">Seaborn</span>
-    <span class="tag">Customer Retention</span>
-  </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+              <span class="tag">Customer Retention</span>
+            </div>
 
-    <div class="project-link-row">
-    <a href="https://github.com/betty-cod/customer-churn-analysis-/blob/main/churn_analysis.py"
-       target="_blank"
-       class="project-link-btn">
-      View Code on GitHub →
-    </a>
-  </div>
-</article>
-    
-<article class="project-card">
-  <div class="project-head">
-    <div>
-      <h3 class="project-title">Apple Stock Analyzer</h3>
-      <div class="meta">Python / Data Structures</div>
-    </div>
-  </div>
-  <p>
-    Built a Python-based Apple Stock Analyzer using real-world stock data. The program calculates summary statistics, performs sorting using bubble sort and selection sort, supports date search and price filtering, and identifies the Top 5 highest closing prices using a heap.
-  </p>
+            <div class="project-link-row">
+              <a href="https://github.com/betty-cod/customer-churn-analysis-/blob/main/churn_analysis.py" target="_blank" class="project-link-btn">
+                View Code on GitHub →
+              </a>
+            </div>
+          </article>
 
-  <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
-    Key features: data loading from CSV, algorithm-based sorting, search functionality, filtering, and efficient Top 5 analysis using a heap data structure.
-  </p>
+          <article class="project-card">
+            <div class="project-head">
+              <div>
+                <h3 class="project-title">Apple Stock Analyzer</h3>
+                <div class="meta">Python / Data Structures</div>
+              </div>
+            </div>
 
-  <div class="project-tags">
-    <span class="tag">Python</span>
-    <span class="tag">Algorithms</span>
-    <span class="tag">Heap</span>
-    <span class="tag">CSV Data</span>
-    <span class="tag">Financial Analysis</span>
-  </div>
+            <p>
+              Built a Python-based Apple Stock Analyzer using real-world stock data. The program calculates summary statistics, performs sorting using bubble sort and selection sort, supports date search and price filtering, and identifies the Top 5 highest closing prices using a heap.
+            </p>
 
-  <div class="project-link-row">
-  <a href="https://github.com/betty-cod/apple-stock-analyzer/blob/main/Apple_Stock_Analyzer.py"
-     target="_blank"
-     class="project-link-btn">
-    View Code on GitHub →
-  </a>
-</div>
-</article>
+            <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
+              Key features: data loading from CSV, algorithm-based sorting, search functionality, filtering, and efficient Top 5 analysis using a heap data structure.
+            </p>
 
-      <article class="project-card">
-  <div class="project-head">
-    <div>
-      <h3 class="project-title">Supply Chain Optimization Model</h3>
-      <div class="meta">Excel Solver / Optimization</div>
-    </div>
-  </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">Heap</span>
+              <span class="tag">CSV Data</span>
+              <span class="tag">Financial Analysis</span>
+            </div>
 
-  <p>
-    Developed a linear programming model in Excel and used Solver to identify cost-effective decisions under business constraints. This project demonstrates data-driven decision-making using optimization techniques.
-  </p>
+            <div class="project-link-row">
+              <a href="https://github.com/betty-cod/apple-stock-analyzer/blob/main/Apple_Stock_Analyzer.py" target="_blank" class="project-link-btn">
+                View Code on GitHub →
+              </a>
+            </div>
+          </article>
 
-  <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
-    Key features: optimization modeling, constraint-based decision making, Excel analysis, and Solver-driven business problem solving.
-  </p>
+          <article class="project-card">
+            <div class="project-head">
+              <div>
+                <h3 class="project-title">Supply Chain Optimization Model</h3>
+                <div class="meta">Excel Solver / Optimization</div>
+              </div>
+            </div>
 
-  <div class="project-tags">
-    <span class="tag">Excel</span>
-    <span class="tag">Solver</span>
-    <span class="tag">Optimization</span>
-    <span class="tag">Linear Programming</span>
-    <span class="tag">Decision Making</span>
-  </div>
+            <p>
+              Developed a linear programming model in Excel and used Solver to identify cost-effective decisions under business constraints. This project demonstrates data-driven decision-making using optimization techniques.
+            </p>
 
- <div class="project-link-row">
-  <a href="https://github.com/betty-cod/Supply_chain_optimization"
-     target="_blank"
-     class="project-link-btn">
-    View Project on GitHub →
-  </a>
-</div>
-</article>
+            <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
+              Key features: optimization modeling, constraint-based decision making, Excel analysis, and Solver-driven business problem solving.
+            </p>
 
-</div> <!-- projects-grid -->
-</div> <!-- container -->
-</section> <!-- projects section -->
+            <div class="project-tags">
+              <span class="tag">Excel</span>
+              <span class="tag">Solver</span>
+              <span class="tag">Optimization</span>
+              <span class="tag">Linear Programming</span>
+              <span class="tag">Decision Making</span>
+            </div>
 
-<section class="section" id="skills">
-  <div class="container">
-    <h2 class="section-title">Skills</h2>
-    <p class="section-text">
-      A combination of technical skills, analytical tools, and professional strengths that I continue to grow through classwork and projects.
-    </p>
-
-    <div class="skills-grid">
-  <article class="skills-card">
-    <h3 class="skill-group-title">
-      <i class="fa-solid fa-chart-line"></i> Analytics Tools
-    </h3>
-    <div class="skill-list">
-      <span class="tag">Excel</span>
-      <span class="tag">Power BI</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Python</span>
-    </div>
-  </article>
-
-  <article class="skills-card">
-    <h3 class="skill-group-title">
-      <i class="fa-solid fa-table"></i> Excel & Data
-    </h3>
-    <div class="skill-list">
-      <span class="tag">PivotTables</span>
-      <span class="tag">Solver</span>
-      <span class="tag">Data Cleaning</span>
-      <span class="tag">Visualization</span>
-    </div>
-  </article>
-
-  <article class="skills-card">
-    <h3 class="skill-group-title">
-      <i class="fa-solid fa-code"></i> Programming
-    </h3>
-    <div class="skill-list">
-      <span class="tag">Pandas</span>
-      <span class="tag">Matplotlib</span>
-      <span class="tag">Algorithms</span>
-      <span class="tag">Problem Solving</span>
-    </div>
-  </article>
-
-  <article class="skills-card">
-    <h3 class="skill-group-title">
-      <i class="fa-solid fa-user"></i> Professional
-    </h3>
-    <div class="skill-list">
-      <span class="tag">Communication</span>
-      <span class="tag">Teamwork</span>
-      <span class="tag">Customer Service</span>
-      <span class="tag">Fast Learner</span>
-    </div>
-  </article>
-</div>
-</section> <!-- ✅ THIS WAS MISSING -->
-    <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-card">
-        <div>
-          <h2 class="section-title" style="margin-bottom: 8px;">Contact Me</h2>
-          <p class="section-text" style="margin: 0; max-width: 560px;">
-            I’m currently seeking internship opportunities in Business Analytics and would love to connect with professionals, recruiters, and others in data and technology.
-          </p>
-        </div>
-        <div class="hero-actions" style="margin:16px 0 0 0;">
-          <a class="btn btn-primary" href="mailto:laikebetelhem@gmail.com">Email Me</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
-          <a class="btn btn-secondary" href="https://github.com/betty-cod" target="_blank">GitHub</a>
+            <div class="project-link-row">
+              <a href="https://github.com/betty-cod/Supply_chain_optimization" target="_blank" class="project-link-btn">
+                View Project on GitHub →
+              </a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-text">
+          A combination of technical skills, analytical tools, and professional strengths that I continue to grow through classwork and projects.
+        </p>
+
+        <div class="skills-grid">
+          <article class="skills-card">
+            <h3 class="skill-group-title">
+              <i class="fa-solid fa-chart-line"></i> Analytics Tools
+            </h3>
+            <div class="skill-list">
+              <span class="tag">Excel</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Python</span>
+            </div>
+          </article>
+
+          <article class="skills-card">
+            <h3 class="skill-group-title">
+              <i class="fa-solid fa-table"></i> Excel & Data
+            </h3>
+            <div class="skill-list">
+              <span class="tag">PivotTables</span>
+              <span class="tag">Solver</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Visualization</span>
+            </div>
+          </article>
+
+          <article class="skills-card">
+            <h3 class="skill-group-title">
+              <i class="fa-solid fa-code"></i> Programming
+            </h3>
+            <div class="skill-list">
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </article>
+
+          <article class="skills-card">
+            <h3 class="skill-group-title">
+              <i class="fa-solid fa-user"></i> Professional
+            </h3>
+            <div class="skill-list">
+              <span class="tag">Communication</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Customer Service</span>
+              <span class="tag">Fast Learner</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2 class="section-title" style="margin-bottom: 8px;">Contact Me</h2>
+            <p class="section-text" style="margin: 0; max-width: 560px;">
+              I’m currently seeking internship opportunities in Business Analytics and would love to connect with professionals, recruiters, and others in data and technology.
+            </p>
+          </div>
+
+          <div class="hero-actions" style="margin:16px 0 0 0;">
+            <a class="btn btn-primary" href="mailto:laikebetelhem@gmail.com">Email Me</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">LinkedIn</a>
+            <a class="btn btn-secondary" href="https://github.com/betty-cod" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
