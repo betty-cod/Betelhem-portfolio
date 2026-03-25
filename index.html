@@ -96,17 +96,17 @@
       align-items: center;
       justify-content: space-between;
     }
+    .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  white-space: nowrap;
+}
     .brand {
       font-weight: 800;
       letter-spacing: -0.03em;
       font-size: 1.05rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-left: auto;   /* 👉 pushes it to RIGHT */
     }
         .nav-links a {
       color: var(--muted);
@@ -117,17 +117,42 @@
     .nav-links a:hover {
       color: var(--accent);
     }
-    
     .hero {
-      padding: 72px 0 40px;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
+  padding: 72px 0 40px;
+}
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 640px;
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+    
+    
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -158,14 +183,7 @@
       margin-bottom: 18px;
       font-weight: 600;
     }
-    .hero p {
-      margin: 0 0 26px;
-      color: #374151;
-      max-width: 640px;
-    }
-    .hero-actions {
-      margin-bottom: 15px;
-    }
+    
     .education-card {
       display: flex;
       align-items: center;
@@ -242,36 +260,7 @@
       font-size: 0.98rem;
     }
 
-    .hero-card {
-      background: linear-gradient(180deg, #ffffff 0%, #fdf2f2 100%);
-      border-radius: 28px;
-      padding: 26px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    }
-    .hero-card {
-      background: linear-gradient(135deg, #fff, #fee2e2);
-    }
-
-    .profile-image {
-      width: 260px;
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.7);
-    }
-      .profile-image {
-      width: 260px;
-      border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-    .profile-image:hover {
-      transform: scale(1.03);
-      transition: 0.3s ease;
-    }
-    .profile-image {
-      border: 3px solid #ffffff;
-    }
+    
         .section {
       padding: 36px 0;
     }
@@ -539,11 +528,9 @@
 </header>
 
   <main id="top">
-    <section class="hero">
+   <section class="hero">
   <div class="container hero-grid">
-
-    <!-- LEFT SIDE (TEXT) -->
-    <div>
+    <div class="hero-text">
       <div class="eyebrow">Business Analytics Student at UNL</div>
 
       <h1>Hi, I’m Betelhem Tadesse</h1>
@@ -556,7 +543,6 @@
         <a href="Betelhem_Tadesse_resume.pdf" target="_blank" class="btn-secondary">
           View Resume
         </a>
-
         <a href="Betelhem_Tadesse_resume.pdf" download class="btn-primary">
           Download Resume
         </a>
@@ -583,11 +569,11 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE (IMAGE) -->
-    <div class="hero-card">
+    <div class="hero-image-wrap">
       <img src="profile.jpg" alt="Portrait of Betelhem Tadesse" class="profile-image">
     </div>
-
+  </div>
+</section>
   </div>
 </section>
     <section class="section" id="about">
@@ -768,11 +754,6 @@
   <p style="margin-top:10px; color:#6b7280; font-size:0.95rem;">
     Key features: optimization modeling, constraint-based decision making, Excel analysis, and Solver-driven business problem solving.
   </p>
-
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px;">
-    <img src="solver-chart1.png" style="width:100%; border-radius:12px; margin-bottom:10px;">
-    <img src="solver-chart2.png" style="width:100%; border-radius:12px;">
-  </div>
 
   <div class="project-tags">
     <span class="tag">Excel</span>
