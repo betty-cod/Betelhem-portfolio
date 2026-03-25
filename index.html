@@ -288,11 +288,7 @@
       max-width: 720px;
       margin-bottom: 24px;
     }
-    .section#skills .container {
-      display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 40px;
-      align-items: start;
+    ms: start;
     }
     .about-card,
     .experience-card,
@@ -388,14 +384,18 @@
     .project-card {
       box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
-
     .tag {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 6px 12px;
       border-radius: 999px;
       background: #f3f4f6;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
+      transition: 0.2s ease;
+    }
+    .tag:hover {
+      background: #fee2e2;
+      color: #b91c1c;
     }
 
     .project-image {
@@ -403,17 +403,18 @@
       border: 1px solid var(--border);
       margin-top: 16px;
     }
-
-    .skills-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .container {
+      display: block;
     }
-
     .skill-group-title {
-      margin: 0 0 12px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 800;
+      margin-bottom: 14px;
     }
-
+    skill-group-title i {
+      margin-right: 8px;
+      color: #b91c1c;
+    }
     .skill-list {
       display: flex;
       flex-wrap: wrap;
@@ -428,22 +429,49 @@
       flex-wrap: wrap;
     }
       .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px; /* increase spacing */
-    }
-  
-  .skills-card {
-    padding: 26px;
-    border-radius: 20px;
-  }
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 24px;
+      }
+    .skills-grid {
+        gap: 26px;
+      }
+        .skills-card {
+          background: #ffffff;
+          border: 1px solid var(--border);
+          border-radius: 20px;
+          padding: 24px;
+          box-shadow: var(--shadow);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
   .subtitle {
     color: #555;
   }
-  .skill-list {
-    display: flex;
-    flex-direction: column; /* stack nicely */
-    gap: 10px;
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills-card {
+      position: relative;
+      overflow: hidden;
+    }
+      .skills-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  }
+  .skills-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #b91c1c; /* UNL red */
+  }
+  .section-text {
+    max-width: 760px;
   }
    .hero-actions {
   margin: 20px 0;
@@ -742,7 +770,7 @@
   </div>
 
   <div class="project-link-row">
-    <a href="https://github.com/betty-cod/Suply_chain_optimization"
+    <a href="https://github.com/betty-cod/Supply_chain_optimization"
        target="_blank"
        class="project-link-btn">
       View Project on GitHub →
@@ -752,53 +780,61 @@
 </div>
         
     <section class="section" id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-text">A combination of technical skills, analytical tools, and professional strengths that I continue to grow through classwork and projects.</p>
-        <div class="skills-grid">
-          <article class="skills-card">
-            <h3 class="skill-group-title">Analytics Tools</h3>
-            <div class="skill-list">
-              <span class="tag">Excel</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Python</span>
-            </div>
-          </article>
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-text">
+      A combination of technical skills, analytical tools, and professional strengths that I continue to grow through classwork and projects.
+    </p>
 
-          <article class="skills-card">
-            <h3 class="skill-group-title">Excel & Data</h3>
-            <div class="skill-list">
-              <span class="tag">PivotTables</span>
-              <span class="tag">Solver</span>
-              <span class="tag">Data Cleaning</span>
-              <span class="tag">Visualization</span>
-            </div>
-          </article>
+    <div class="skills-grid">
+  <article class="skills-card">
+    <h3 class="skill-group-title">
+      <i class="fa-solid fa-chart-line"></i> Analytics Tools
+    </h3>
+    <div class="skill-list">
+      <span class="tag">Excel</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Python</span>
+    </div>
+  </article>
 
-          <article class="skills-card">
-            <h3 class="skill-group-title">Programming</h3>
-            <div class="skill-list">
-              <span class="tag">Pandas</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">Algorithms</span>
-              <span class="tag">Problem Solving</span>
-            </div>
-          </article>
+  <article class="skills-card">
+    <h3 class="skill-group-title">
+      <i class="fa-solid fa-table"></i> Excel & Data
+    </h3>
+    <div class="skill-list">
+      <span class="tag">PivotTables</span>
+      <span class="tag">Solver</span>
+      <span class="tag">Data Cleaning</span>
+      <span class="tag">Visualization</span>
+    </div>
+  </article>
 
-          <article class="skills-card">
-            <h3 class="skill-group-title">Professional</h3>
-            <div class="skill-list">
-              <span class="tag">Communication</span>
-              <span class="tag">Teamwork</span>
-              <span class="tag">Customer Service</span>
-              <span class="tag">Fast Learner</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+  <article class="skills-card">
+    <h3 class="skill-group-title">
+      <i class="fa-solid fa-code"></i> Programming
+    </h3>
+    <div class="skill-list">
+      <span class="tag">Pandas</span>
+      <span class="tag">Matplotlib</span>
+      <span class="tag">Algorithms</span>
+      <span class="tag">Problem Solving</span>
+    </div>
+  </article>
 
+  <article class="skills-card">
+    <h3 class="skill-group-title">
+      <i class="fa-solid fa-user"></i> Professional
+    </h3>
+    <div class="skill-list">
+      <span class="tag">Communication</span>
+      <span class="tag">Teamwork</span>
+      <span class="tag">Customer Service</span>
+      <span class="tag">Fast Learner</span>
+    </div>
+  </article>
+</div>
     <section class="section" id="contact">
     <div class="container">
       <div class="contact-card">
