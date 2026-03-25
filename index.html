@@ -95,9 +95,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 0;
     }
-
     .brand {
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -106,11 +104,11 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-left: auto;   /* 👉 pushes it to RIGHT */
     }
-
-    .nav-links a {
+        .nav-links a {
       color: var(--muted);
       font-weight: 500;
       transition: color 0.2s ease;
@@ -119,7 +117,7 @@
     .nav-links a:hover {
       color: var(--accent);
     }
-
+    
     .hero {
       padding: 72px 0 40px;
     }
@@ -288,8 +286,6 @@
       color: var(--muted);
       max-width: 720px;
       margin-bottom: 24px;
-    }
-    ms: start;
     }
     .about-card,
     .experience-card,
@@ -527,7 +523,8 @@
 <body>
   <header class="navbar">
   <div class="container nav-inner">
-    <a href="#top" class="brand">Betelhem Tadesse</a>
+    
+    <div class="brand">Betelhem Tadesse</div>
 
     <nav class="nav-links">
       <a href="#about">About</a>
@@ -537,6 +534,7 @@
       <a href="https://www.linkedin.com/in/betelhem-tadesse/" target="_blank">🔗 LinkedIn</a>
       <a href="https://github.com/betty-cod" target="_blank">💻 GitHub</a>
     </nav>
+
   </div>
 </header>
 
